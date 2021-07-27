@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">{{ city.fldCity }} - {{ city.fldState }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">City: {{ city.fldCity }}</li>
+        <li class="list-group-item">State: {{ city.fldState }}</li>
+        <li class="list-group-item">Latitude Decimal: {{ city.fldLatD }}</li>
+        <li class="list-group-item">Latitude Minutes: {{ city.fldLatM }}</li>
+        <li class="list-group-item">Latitude Seconds: {{ city.fldLatS }}</li>
+        <li class="list-group-item">North - South: {{ city.fldNS }}</li>
+        <li class="list-group-item">Longitude Decimal: {{ city.fldLonD }}</li>
+        <li class="list-group-item">Longitude Minutes: {{ city.fldLonM }}</li>
+        <li class="list-group-item">Longitude Seconds: {{ city.fldLonS }}</li>
+        <li class="list-group-item">East - West: {{ city.fldEW }}</li>
+
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{city.id}}" class="card-link btn btn-primary">Edit</a>
+    </div>
+</div>
+<form action="/delete/{{city.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{city.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="fldCity">City Name</label>
+            <input id="fldCity" type="text" class="form-control" placeholder="City Name" name="fldCity" value="{{fldName}}">
+        </div>
+        <div class="col">
+            <label for="fldState">State Abbreviation</label>
+            <input id="fldState" type="text" class="form-control" placeholder="State Name" name="fldState" value="{{fldState}}">
+        </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldLatD">Latitude Decimal</label>
+            <input id="fldLatD" type="text" class="form-control" placeholder="Latitude Decimal" name="fldLatD" value="{{fldLatD}}">
+        </div>
+
+        <div class="col">
+            <label for="fldLatM">Latitude Minute</label>
+            <input id="fldLatM" type="text" class="form-control" placeholder="Latitude Minute" name="fldLatM" value="{{fldLatM}}">
+        </div>
+
+        <div class="col">
+            <label for="fldLatS">Latitude Second</label>
+            <input id="fldLatS" type="text" class="form-control" placeholder="Latitude Second" name="fldLatS" value="{{fldLatS}}">
+        </div>
+
+        <div class="col">
+            <label for="fldNS">North-South</label>
+            <input id="fldNS" type="text" class="form-control" placeholder="North South" name="fldNS" value="{{fldNS}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldLonD">Longitude Decimal</label>
+            <input id="fldLonD" type="text" class="form-control" placeholder="Longitude Decimal" name="fldLonD" value="{{fldLonD}}">
+        </div>
+
+        <div class="col">
+            <label for="fldLonM">Longitude Minutes</label>
+            <input id="fldLonM" type="text" class="form-control" placeholder="Longitude Minutes" name="fldLonM" value="{{fldLonM}}">
+        </div>
+
+        <div class="col">
+            <label for="fldLonS">Longitude Second</label>
+            <input id="fldLonS" type="text" class="form-control" placeholder="Longitude Seconds" name="fldLonS" value="{{fldLonS}}">
+        </div>
+
+        <div class="col">
+            <label for="fldEW">East-West</label>
+            <input id="fldEW" type="text" class="form-control" placeholder="East-West" name="fldEW" value="{{fldEW}}">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class ="col">
+        <button type="submit" class="btn btn-success">Edit!</button>
+        </div>
+    </div>
+    </div>
+
+</form>
+{% endblock %}
