@@ -1,8 +1,8 @@
 CREATE DATABASE citiesData;
 use citiesData;
 
-CREATE TABLE IF NOT EXISTS cities(
-    `id` int AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS citiesData(
+    `id` int AUTO_INCREMENT PRIMARY KEY ,
     `fldLatD` numeric (1,6),
     `fldLatM` numeric (1,6),
     `fldLatS` numeric (1,6),
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS cities(
     `fldState` VARCHAR(4) CHARACTER SET utf8,
     PRIMARY KEY (`id`)
 );
-INSERT INTO cities(fldLatD,fldLatM,fldLatS,fldNS,fldLonD,fldLonM,fldLonS,fldEW,fldCity,fldState) VALUES
+INSERT INTO citiesData(fldLatD,fldLatM,fldLatS,fldNS,fldLonD,fldLonM,fldLonS,fldEW,fldCity,fldState) VALUES
     (12,234,5,'"N"',1,4,5,'"w"','city','state')      ,
     (   41,    5,   59,' "N"',     80,   39,    0,' "W"',' "Youngstown"',' OH'),
     (   42,   52,   48,' "N"',     97,   23,   23,' "W"',' "Yankton"',' SD'),
