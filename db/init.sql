@@ -1,21 +1,22 @@
 CREATE DATABASE citiesData;
 use citiesData;
 
-CREATE TABLE IF NOT EXISTS tblCitiesImport (
+CREATE TABLE IF NOT EXISTS cities(
     `id` int AUTO_INCREMENT,
-    `LatD` numeric (1,6),
-    `LatM` numeric (1,6),
-    `LatS` numeric (1,6),
-    `NS` VARCHAR(4) CHARACTER SET utf8,
-    `LonD` numeric (1,6),
-    `LonM` numeric (1,6),
-    `LonS` numeric (1,6),
-    `EW` VARCHAR(4) CHARACTER SET utf8,
-    `City` VARCHAR(21) CHARACTER SET utf8,
-    `State` VARCHAR(4) CHARACTER SET utf8,
+    `fldLatD` numeric (1,6),
+    `fldLatM` numeric (1,6),
+    `fldLatS` numeric (1,6),
+    `fldNS` VARCHAR(4) CHARACTER SET utf8,
+    `fldLonD` numeric (1,6),
+    `fldLonM` numeric (1,6),
+    `fldLonS` numeric (1,6),
+    `fldEW` VARCHAR(4) CHARACTER SET utf8,
+    `fldCity` VARCHAR(21) CHARACTER SET utf8,
+    `fldState` VARCHAR(4) CHARACTER SET utf8,
     PRIMARY KEY (`id`)
 );
-INSERT INTO tblCitiesImport (fldLatD,fldLatM,fldLatS,fldNS,fldLonD,fldLonM,fldLonS,fldEW,fldCity,fldState) VALUES
+INSERT INTO cities(fldLatD,fldLatM,fldLatS,fldNS,fldLonD,fldLonM,fldLonS,fldEW,fldCity,fldState) VALUES
+    (12,234,5,'"N"',1,4,5,'"w"','city','state')      ,
     (   41,    5,   59,' "N"',     80,   39,    0,' "W"',' "Youngstown"',' OH'),
     (   42,   52,   48,' "N"',     97,   23,   23,' "W"',' "Yankton"',' SD'),
     (   46,   35,   59,' "N"',    120,   30,   36,' "W"',' "Yakima"',' WA'),
