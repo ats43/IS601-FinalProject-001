@@ -2,7 +2,7 @@ from flask import current_app as app
 from flask import render_template
 
 
-@app.route("/home.html")
+@app.route("/home")
 def home():
     return render_template(
         'home.html',

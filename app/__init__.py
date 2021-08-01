@@ -9,9 +9,13 @@ app = Flask(
     )
 
 
-@app.route('/')
+@app.route('/home')
 def home():
-    return "home page"
+    return render_template(
+        'home.html',
+        title="Jinja Demo Site",
+        description="Smarter page template with Flask & Jinja. this is the description."
+    )
 
 
 

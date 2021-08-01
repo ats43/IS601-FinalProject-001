@@ -15,7 +15,6 @@ def home():
     return render_template('home.html')
 
 
-
 # @app.route('/')
 # def home():
 #     value = square_of_a_number_plus_nine(5)

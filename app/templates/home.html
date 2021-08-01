@@ -6,6 +6,15 @@
 {% endblock %}
 
 {%  block navigation %}
+    <div class="status">
+    {% if status.active %}
+    <p>Activated.</p>
+    {% elif status.disabled %}
+    <p>Disabled.</p>
+    {% else %}
+    <p>OH GOD WHAT IS THE STATUS?!</p>
+    {% endif %}
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -14,3 +23,6 @@
         <p>{{description}}</p>
     </div>
 {% endblock %}
+
+
+
