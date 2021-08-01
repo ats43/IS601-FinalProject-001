@@ -1,30 +1,52 @@
-from typing import List, Dict
-import simplejson as json
-from flask import Flask, request, Response, redirect
-from flask import render_template
-from flaskext.mysql import MySQL
-from pymysql.cursors import DictCursor
-
-app = Flask(__name__)
-# mysql = MySQL(cursorclass=DictCursor)
-
-# app.config['MYSQL_DATABASE_HOST'] = 'db'
-# app.config['MYSQL_DATABASE_USER'] = 'root'
-# app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
-# app.config['MYSQL_DATABASE_PORT'] = 3306
-# app.config['MYSQL_DATABASE_DB'] = 'citiesData'
-# mysql.init_app(app)
+from flask import Flask, Markup, render_template, make_response, request, jsonify
+from logic import square_of_a_number_plus_nine
 
 
-@app.route('/', methods=['GET'])
+app = Flask(
+    __name__,
+    instance_relative_config=False,
+    template_folder="templates",
+    static_folder="static"
+    )
+
+
+@app.route('/')
+def home():
+    value = square_of_a_number_plus_nine(5)
+    return 'Value is {}'.format(value)
+
+
+@app.route('/markup')
+def markup():
+    return Markup("<h1> Hello WORLD </h1>")
+
+
+@app.route('/index.html')
 def index():
-    # user = {'username': "Anthony's Project"}
-    # cursor = mysql.get_db().cursor()
-    # cursor.execute('SELECT * FROM citiesData')
-    # result = cursor.fetchall()
-    # return render_template('index.html', title='Home', user=user, cities=result)
-    return "Hello World"
+    return render_template("index.html")
 
+
+@app.route('/response')
+def response():
+    headers = {"Content-Type": "application/json"}
+    return make_response('it worked!', 200, headers)
+
+
+@app.route('/request', methods=['GET'])
+def request():
+    if request.method != 'GET':
+        return make_response('Malformed Request', 400)
+    headers = {"Content-Type": "application/json"}
+    return make_response('it worked!', 200, headers)
+
+
+@app.route('/jsonify', methods=['GET'])
+def jsonify():
+    if request.method != 'GET':
+        return make_response('Malformed request', 400)
+    my_dict = {'key':'dictionary_value'}
+    headers = {'Content-Type': 'application/json'}
+    return make_response(jsonify(my_dict), 200, headers)
 # @app.route('/view/<int:city_id>', methods=['GET'])
 # def record_view(city_id):
 #     cursor = mysql.get_db().cursor()
