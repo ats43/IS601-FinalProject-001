@@ -11,8 +11,14 @@ app = Flask(
 
 @app.route('/home')
 def home():
+    nav = [
+        {'name': 'google', 'url': 'https://google.com/'},
+        {'name': 'njit', 'url': 'https://njit.edu'},
+        {'name': 'youtube', 'url': 'https://youtube.com/'}
+    ]
     return render_template(
         'home.html',
+        nav=nav,
         title="Jinja Demo Site",
         description="Smarter page template with Flask & Jinja. this is the description."
     )
