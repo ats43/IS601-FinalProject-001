@@ -2,20 +2,20 @@ version: "2"
 services:
   app:
     build: ./app
-    container_name: "Flask_App1"
-    links:
-      - db
-    depends_on:
-      - db
+    container_name: "Final_Flask_App"
+#    links:
+#      - db
+#    depends_on:
+#      - db
     ports:
       - "5000:5000"
-
-  db:
-    image: mysql:5.7
-    container_name: "MySQL_Database1"
-    ports:
-      - "32000:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - ./db:/docker-entrypoint-initdb.d/:ro
+#
+#  db:
+#    image: mysql:5.7
+#    container_name: "Final_MySQL_Database"
+#    ports:
+#      - "32000:3306"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#    volumes:
+#      - ./db:/docker-entrypoint-initdb.d/:ro
