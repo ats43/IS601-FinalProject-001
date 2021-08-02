@@ -1,11 +1,24 @@
-from flask import current_app as app
-from flask import render_template
-
-
-@app.route("/home")
-def home():
-    return render_template(
-        'home.html',
-        title="Jinja Demo Site",
-        description="Smarter page template with Flask & Jinja. this is the description."
-    )
+# from flask import (
+#     Flask,
+#     url_for,
+#     render_template,
+#     redirect
+# )
+# from forms import ContactForm, SignupForm
+#
+#
+# app = Flask(__name__, instance_relative_config=False)
+# app.config.from_object('config.Config')
+#
+#
+# @app.route("/contact", methods=["GET", "POST"])
+# def contact():
+#     """Standard `contact` form."""
+#     form = ContactForm()
+#     if form.validate_on_submit():
+#         return redirect(url_for("success"))
+#     return render_template(
+#         "contact.jinja2",
+#         form=form,
+#         template="form-template"
+#     )

@@ -1,3 +1,7 @@
 Flask
+flask-wtf
 flask-mysql
 simplejson
+wtforms
+flask_wtf
+email_validator
