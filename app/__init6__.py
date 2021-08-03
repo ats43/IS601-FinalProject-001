@@ -19,7 +19,7 @@ def init_app():
 
     with app.app_context():
         # Include our Routes
-        from . import routes
+        from app4 import home4
 
         # Register Blueprints
         app.register_blueprint(auth.auth_bp)
