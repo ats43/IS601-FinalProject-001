@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
 
 app = Flask(__name__)
 
@@ -19,6 +19,12 @@ def index4():
     return render_template("index4.html",
                            title="INDEX PAGE",
                            body="This is the body")
+
+
+@app.route("/api/v2/test_response")
+def users4():
+    headers = {"Content-Type": "application/json"}
+    return make_response('Test Worked', 200)
 
 
 if __name__ == '__main__':
