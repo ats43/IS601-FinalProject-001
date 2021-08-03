@@ -22,6 +22,10 @@ def contact():
     return render_template('contact.html', title='Contact', form=form)
 
 
+@app.route('/signup')
+def signup():
+    form = SignupForm()
+    return render_template('signup.html', title='Sign Up Form', form=form)
 
 # @app.route('/')
 # def home():
