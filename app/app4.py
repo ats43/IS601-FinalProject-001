@@ -1,6 +1,19 @@
-from flask import Flask, render_template, make_response, redirect, url_for
+from flask import Flask, render_template, make_response, redirect, url_for, g
 
 app = Flask(__name__)
+
+
+def get_test_value():
+    if 'test_value' not in g:
+        g.test_value = "This is the G Value"
+    return g.test_value
+
+
+@app.teardown_testvalue
+def remove_test_value():
+    test_value = g.pop('test_value', None)
+    return test_value
+
 
 
 @app.route("/4")
