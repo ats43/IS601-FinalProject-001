@@ -1,5 +1,5 @@
 # Project Description
-This is the final project for IS601. 
+This is the final project for IS601. Here you find screenshots of each section.
 
 ## Section I
 ![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/Hello_World.PNG)
@@ -26,3 +26,13 @@ This is the final project for IS601.
 ![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_V/secret_key.PNG)
 
 ## Section VI
+
+## Section VII
+
+## Section VIII
+
+## Section IX
+
+## Section X
+
+## Section XI
