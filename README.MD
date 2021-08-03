@@ -1,8 +1,8 @@
 # Project Description
-This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman
+This is the final project for IS601. 
 
-## Assignments
-* [Assignment 3](formIntro-pycharm.pdf)
+## Section I
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Videos
 * [Video 3 - Assignment 3](https://youtu.be/5WBYxNZz8Zw)
