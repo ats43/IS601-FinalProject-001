@@ -5,3 +5,4 @@ simplejson
 wtforms
 flask_wtf
 email_validator
+SQLAlchemy
