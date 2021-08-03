@@ -10,43 +10,48 @@ app = Flask(
     )
 
 
-@app.route('/')
+@app.route('/home')
 def home():
-    value = square_of_a_number_plus_nine(5)
-    return 'Value is {}'.format(value)
+    return render_template('home.html')
 
 
-@app.route('/markup')
-def markup():
-    return Markup("<h1> Hello WORLD </h1>")
-
-
-@app.route('/index.html')
-def index():
-    return render_template("index.html")
-
-
-@app.route('/response')
-def response():
-    headers = {"Content-Type": "application/json"}
-    return make_response('it worked!', 200, headers)
-
-
-@app.route('/request', methods=['GET'])
-def request():
-    if request.method != 'GET':
-        return make_response('Malformed Request', 400)
-    headers = {"Content-Type": "application/json"}
-    return make_response('it worked!', 200, headers)
-
-
-@app.route('/jsonify', methods=['GET'])
-def jsonify():
-    if request.method != 'GET':
-        return make_response('Malformed request', 400)
-    my_dict = {'key':'dictionary_value'}
-    headers = {'Content-Type': 'application/json'}
-    return make_response(jsonify(my_dict), 200, headers)
+# @app.route('/')
+# def home():
+#     value = square_of_a_number_plus_nine(5)
+#     return 'Value is {}'.format(value)
+#
+#
+# @app.route('/markup')
+# def markup():
+#     return Markup("<h1> Hello WORLD </h1>")
+#
+#
+# @app.route('/index.html')
+# def index():
+#     return render_template("index.html")
+#
+#
+# @app.route('/response')
+# def response():
+#     headers = {"Content-Type": "application/json"}
+#     return make_response('it worked!', 200, headers)
+#
+#
+# @app.route('/request', methods=['GET'])
+# def request():
+#     if request.method != 'GET':
+#         return make_response('Malformed Request', 400)
+#     headers = {"Content-Type": "application/json"}
+#     return make_response('it worked!', 200, headers)
+#
+#
+# @app.route('/jsonify', methods=['GET'])
+# def jsonify():
+#     if request.method != 'GET':
+#         return make_response('Malformed request', 400)
+#     my_dict = {'key':'dictionary_value'}
+#     headers = {'Content-Type': 'application/json'}
+#     return make_response(jsonify(my_dict), 200, headers)
 # @app.route('/view/<int:city_id>', methods=['GET'])
 # def record_view(city_id):
 #     cursor = mysql.get_db().cursor()
