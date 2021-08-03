@@ -5,3 +5,7 @@ simplejson
 wtforms
 flask_wtf
 email_validator
+SQLAlchemy
+flask-sqlalchemy
+python-dotenv
+flask_redis
