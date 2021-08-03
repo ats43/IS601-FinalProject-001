@@ -10,4 +10,4 @@ RUN pip install  -r requirements.txt --upgrade pip
 
 COPY . /app
 
-CMD python __init6__.py
+CMD python __init9__.py
