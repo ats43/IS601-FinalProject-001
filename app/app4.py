@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response
+from flask import Flask, render_template, make_response, redirect, url_for
 
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/4")
 @app.route("/home4")
 def home4():
-    return "Hello World"
+    return "HomePage: Hello World"
 
 
 @app.route("/user/<username>", methods=["GET", "POST", "PUT"])
@@ -25,6 +25,13 @@ def index4():
 def users4():
     headers = {"Content-Type": "application/json"}
     return make_response('Test Worked', 200)
+
+
+@app.route("/landing")
+def landing():
+    return redirect((url_for('home4')))
+
+
 
 
 if __name__ == '__main__':
