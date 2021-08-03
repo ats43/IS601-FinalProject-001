@@ -1,6 +1,6 @@
 from flask import Flask, Markup, render_template, make_response, request, jsonify
 from logic import square_of_a_number_plus_nine
-
+from forms import ContactForm, SignupForm
 
 app = Flask(
     __name__,
@@ -8,12 +8,24 @@ app = Flask(
     template_folder="templates",
     static_folder="static"
     )
+app.config['SECRET_KEY']="1q2w3e4r5t6y7u8i9o0p"
 
 
 @app.route('/home')
 def home():
     return render_template('home.html')
 
+
+@app.route('/contact')
+def contact():
+    form = ContactForm()
+    return render_template('contact.html', title='Contact', form=form)
+
+
+@app.route('/signup')
+def signup():
+    form = SignupForm()
+    return render_template('signup.html', title='Sign Up Form', form=form)
 
 # @app.route('/')
 # def home():
