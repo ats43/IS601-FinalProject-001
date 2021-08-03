@@ -2,9 +2,13 @@
 This is the final project for IS601. 
 
 ## Section I
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/Hello_World.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/index.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/make_response.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/markup.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/square+9.PNG)
 
-## Videos
+## Section II
 * [Video 3 - Assignment 3](https://youtu.be/5WBYxNZz8Zw)
 
 ## Assignment 3 Readings
