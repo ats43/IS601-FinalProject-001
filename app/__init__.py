@@ -1,51 +1,25 @@
-from flask import Flask, render_template, url_for, redirect, flash
-from forms import ContactForm, SignupForm
+"""Initialize app."""
+from flask import Flask
+from flask_assets import Environment
+from .assets import compile_assets
 
-app = Flask(
-    __name__,
-    instance_relative_config=False,
-    template_folder="templates",
-    static_folder="static"
-)
-
-app.config['SECRET_KEY'] = "1q2w3e4r5t6y7u8i9o0p"
-app.config['RECAPTCHA_PUBLIC_KEY'] = "p0o9i8u7y6t5r4e3w2q1"
+assets = Environment()
 
 
-@app.route('/home')
-def home():
-    nav = [
-        {'name': 'google', 'url': 'https://google.com/'},
-        {'name': 'njit', 'url': 'https://njit.edu'},
-        {'name': 'youtube', 'url': 'https://youtube.com/'}
-    ]
-    return render_template(
-        'home.html',
-        nav=nav,
-        title="Jinja Demo Site",
-        description="Smarter page template with Flask & Jinja. this is the description."
-    )
+def create_app():
+    """Construct the core application."""
+    app = Flask(__name__, instance_relative_config=False)
+    app.config.from_object('config.Config')
 
+    # Initialize plugins
+    assets.init_app(app)
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-    """Standard 'contact' form """
-    form = ContactForm()
-    if form.validate_on_submit():
-        flash(f'Account Created!', 'success')
-        return redirect(url_for("home"))
-    return render_template("contact.jinja2", form=form, template="form-template")
+    with app.app_context():
+        # Import parts of our application
+        from .admin import routes
+        from .main import routes
+        app.register_blueprint(admin_routes.admin_bp)
+        app.register_blueprint(main_routes.main_bp)
+        compile_assets(assets)
 
-
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-    """Standard 'contact' form """
-    form = SignupForm()
-    if form.validate_on_submit():
-        flash(f'Signed up!', 'success')
-        return redirect(url_for("home"))
-    return render_template("signup.html", form=form, template="form-template")
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+        return app
