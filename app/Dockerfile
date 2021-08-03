@@ -10,4 +10,4 @@ RUN pip install  -r requirements.txt --upgrade pip
 
 COPY . /app
 
-CMD python __init__.py
+CMD python app4.py
