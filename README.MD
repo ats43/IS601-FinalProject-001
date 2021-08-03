@@ -1,18 +1,38 @@
 # Project Description
-This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman
+This is the final project for IS601. Here you find screenshots of each section.
 
-## Assignments
-* [Assignment 3](formIntro-pycharm.pdf)
+## Section I
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/Hello_World.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/index.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/make_response.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/markup.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_I/square+9.PNG)
 
-## Videos
-* [Video 3 - Assignment 3](https://youtu.be/5WBYxNZz8Zw)
+## Section II
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_II/jinja_logic.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_II/jinja_looping.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_II/rendering_a_template.PNG)
 
-## Assignment 3 Readings
-* [More about Jinja Flask Templates](https://realpython.com/primer-on-jinja-templating/)
-* [Reference for Python MySQL - Note: We Use this with flask and on line 53 you can see how to adapt it to connect to the database connection through flask's single connection to mysql](https://www.w3schools.com/python/python_mysql_getstarted.asp)
+## Section III
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_III/contactForm.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_III/signupform.PNG)
 
-# Useful Links
-* [Flask Homepage and Documentation](https://flask.palletsprojects.com/en/1.1.x/)
-* [JSON Spec Reference](https://www.json.org/json-en.html)
-* [SimpleJSON Reference](https://simplejson.readthedocs.io/en/latest/)
-* [W3 Schools SQL Tutorial and Reference](https://www.w3schools.com/sql/)
+## Section IV
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_IV/api_test_response.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_IV/multipleroutes.PNG)
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_IV/routesw_variables.PNG)
+
+## Section V
+![image](https://github.com/ats43/IS601-FinalProject-001/blob/main/screenshots/Section_V/secret_key.PNG)
+
+## Section VI
+
+## Section VII
+
+## Section VIII
+
+## Section IX
+
+## Section X
+
+## Section XI

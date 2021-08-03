@@ -10,6 +10,9 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/app/templates" />
+        <option value="$MODULE_DIR$/flask_blueprint/home/templates" />
+        <option value="$MODULE_DIR$/flask_blueprint/products/templates" />
+        <option value="$MODULE_DIR$/flask_blueprint/profile/templates" />
       </list>
     </option>
   </component>
